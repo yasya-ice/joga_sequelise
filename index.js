@@ -27,6 +27,9 @@ const authorRouter = require("./routes/author")
 app.use("/", authorRouter)
 app.use("/authors", authorRouter)
 
+const articleAdminRoutes = require('./routes/admin/article');
+app.use('/admin', articleAdminRoutes);
+
 app.listen(3000, () => {
     console.log("Server is running on http://localhost:3000")
 } )
